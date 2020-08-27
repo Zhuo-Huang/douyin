@@ -1,0 +1,425 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E0EAAC624EE9D5700C1B5B4 /* HZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */; };
+		3E0EAAC924EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */; };
+		3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5595E024EE0AA5008322B7 /* MYViewController.m */; };
+		3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */; };
+		3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */; };
+		3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */; };
+		3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */; };
+		3E902BB124F6A679005747C4 /* HZMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E902BB024F6A679005747C4 /* HZMessageController.m */; };
+		3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DCFEE24EF4C7400CF434A /* HZViewController.m */; };
+		3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD01A24F014D200CF434A /* HZlistloader.m */; };
+		3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */; };
+		A6892FED1C0BE5B400BF9708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6892FEC1C0BE5B400BF9708 /* main.m */; };
+		A6892FF01C0BE5B400BF9708 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6892FEF1C0BE5B400BF9708 /* AppDelegate.m */; };
+		A6892FF81C0BE5B400BF9708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6892FF71C0BE5B400BF9708 /* Assets.xcassets */; };
+		A6892FFB1C0BE5B400BF9708 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6892FF91C0BE5B400BF9708 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E0EAAC424EE9D5700C1B5B4 /* HZCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionViewCell.h; sourceTree = "<group>"; };
+		3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionViewCell.m; sourceTree = "<group>"; };
+		3E0EAAC724EEDE2F00C1B5B4 /* HZCollectionTopViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionTopViewCell.h; sourceTree = "<group>"; };
+		3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionTopViewCell.m; sourceTree = "<group>"; };
+		3E5595DF24EE0AA5008322B7 /* MYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
+		3E5595E024EE0AA5008322B7 /* MYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
+		3E7B60B624EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "他人页作品数据.json"; path = "../../他人页作品数据.json"; sourceTree = "<group>"; };
+		3E8AE0C624F7F94E007A1796 /* HZVideoitem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoitem.h; sourceTree = "<group>"; };
+		3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZVideoitem.m; sourceTree = "<group>"; };
+		3E8AE0C924F80C2E007A1796 /* HZvideoViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZvideoViewCell.h; sourceTree = "<group>"; };
+		3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZvideoViewCell.m; sourceTree = "<group>"; };
+		3E902BAF24F6A679005747C4 /* HZMessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZMessageController.h; sourceTree = "<group>"; };
+		3E902BB024F6A679005747C4 /* HZMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZMessageController.m; sourceTree = "<group>"; };
+		3E9DCFED24EF4C7400CF434A /* HZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZViewController.h; sourceTree = "<group>"; };
+		3E9DCFEE24EF4C7400CF434A /* HZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZViewController.m; sourceTree = "<group>"; };
+		3E9DD01924F014D200CF434A /* HZlistloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZlistloader.h; sourceTree = "<group>"; };
+		3E9DD01A24F014D200CF434A /* HZlistloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZlistloader.m; sourceTree = "<group>"; };
+		3ED9F4DE24F0A1C600E54E33 /* HZlistItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZlistItem.h; sourceTree = "<group>"; };
+		3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZlistItem.m; sourceTree = "<group>"; };
+		8AB3B7C51EC33303FD5890EA /* Pods-02-加载自定义控制器.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02-加载自定义控制器.release.xcconfig"; path = "Target Support Files/Pods-02-加载自定义控制器/Pods-02-加载自定义控制器.release.xcconfig"; sourceTree = "<group>"; };
+		A6892FE81C0BE5B400BF9708 /* 02-加载自定义控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02-加载自定义控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6892FEC1C0BE5B400BF9708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A6892FEE1C0BE5B400BF9708 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A6892FEF1C0BE5B400BF9708 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A6892FF71C0BE5B400BF9708 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A6892FFA1C0BE5B400BF9708 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A6892FFC1C0BE5B400BF9708 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C69EB18C88C79191421133BB /* Pods-02-加载自定义控制器.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02-加载自定义控制器.debug.xcconfig"; path = "Target Support Files/Pods-02-加载自定义控制器/Pods-02-加载自定义控制器.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A6892FE51C0BE5B400BF9708 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A0FF49702811E450088E63F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C69EB18C88C79191421133BB /* Pods-02-加载自定义控制器.debug.xcconfig */,
+				8AB3B7C51EC33303FD5890EA /* Pods-02-加载自定义控制器.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E9DD01824F014A100CF434A /* usermessage */ = {
+			isa = PBXGroup;
+			children = (
+				3ED9F4DD24F0A11500E54E33 /* view */,
+				3ED9F4DC24F0A10900E54E33 /* controller */,
+				3ED9F4DB24F0A0F800E54E33 /* model */,
+			);
+			name = usermessage;
+			sourceTree = "<group>";
+		};
+		3ED9F4DB24F0A0F800E54E33 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3E9DD01924F014D200CF434A /* HZlistloader.h */,
+				3E9DD01A24F014D200CF434A /* HZlistloader.m */,
+				3ED9F4DE24F0A1C600E54E33 /* HZlistItem.h */,
+				3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */,
+				3E8AE0C624F7F94E007A1796 /* HZVideoitem.h */,
+				3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		3ED9F4DC24F0A10900E54E33 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		3ED9F4DD24F0A11500E54E33 /* view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		A6892FDF1C0BE5B300BF9708 = {
+			isa = PBXGroup;
+			children = (
+				A6892FEA1C0BE5B400BF9708 /* 02-加载自定义控制器 */,
+				A6892FE91C0BE5B400BF9708 /* Products */,
+				1A0FF49702811E450088E63F /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		A6892FE91C0BE5B400BF9708 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A6892FE81C0BE5B400BF9708 /* 02-加载自定义控制器.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A6892FEA1C0BE5B400BF9708 /* 02-加载自定义控制器 */ = {
+			isa = PBXGroup;
+			children = (
+				3E9DD01824F014A100CF434A /* usermessage */,
+				A6892FEE1C0BE5B400BF9708 /* AppDelegate.h */,
+				A6892FEF1C0BE5B400BF9708 /* AppDelegate.m */,
+				3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */,
+				A6892FF71C0BE5B400BF9708 /* Assets.xcassets */,
+				A6892FF91C0BE5B400BF9708 /* LaunchScreen.storyboard */,
+				A6892FFC1C0BE5B400BF9708 /* Info.plist */,
+				A6892FEB1C0BE5B400BF9708 /* Supporting Files */,
+				3E5595DF24EE0AA5008322B7 /* MYViewController.h */,
+				3E5595E024EE0AA5008322B7 /* MYViewController.m */,
+				3E7B60B624EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.h */,
+				3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */,
+				3E0EAAC424EE9D5700C1B5B4 /* HZCollectionViewCell.h */,
+				3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */,
+				3E0EAAC724EEDE2F00C1B5B4 /* HZCollectionTopViewCell.h */,
+				3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */,
+				3E9DCFED24EF4C7400CF434A /* HZViewController.h */,
+				3E9DCFEE24EF4C7400CF434A /* HZViewController.m */,
+				3E902BAF24F6A679005747C4 /* HZMessageController.h */,
+				3E902BB024F6A679005747C4 /* HZMessageController.m */,
+				3E8AE0C924F80C2E007A1796 /* HZvideoViewCell.h */,
+				3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */,
+			);
+			path = "02-加载自定义控制器";
+			sourceTree = "<group>";
+		};
+		A6892FEB1C0BE5B400BF9708 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6892FEC1C0BE5B400BF9708 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A6892FE71C0BE5B400BF9708 /* 02-加载自定义控制器 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6892FFF1C0BE5B400BF9708 /* Build configuration list for PBXNativeTarget "02-加载自定义控制器" */;
+			buildPhases = (
+				28F85DEEDBAFAAC5A2320568 /* [CP] Check Pods Manifest.lock */,
+				A6892FE41C0BE5B400BF9708 /* Sources */,
+				A6892FE51C0BE5B400BF9708 /* Frameworks */,
+				A6892FE61C0BE5B400BF9708 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "02-加载自定义控制器";
+			productName = "02-加载自定义控制器";
+			productReference = A6892FE81C0BE5B400BF9708 /* 02-加载自定义控制器.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A6892FE01C0BE5B300BF9708 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = itheima;
+				TargetAttributes = {
+					A6892FE71C0BE5B400BF9708 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+				};
+			};
+			buildConfigurationList = A6892FE31C0BE5B300BF9708 /* Build configuration list for PBXProject "02-加载自定义控制器" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				en,
+				Base,
+			);
+			mainGroup = A6892FDF1C0BE5B300BF9708;
+			productRefGroup = A6892FE91C0BE5B400BF9708 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A6892FE71C0BE5B400BF9708 /* 02-加载自定义控制器 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A6892FE61C0BE5B400BF9708 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */,
+				A6892FFB1C0BE5B400BF9708 /* LaunchScreen.storyboard in Resources */,
+				A6892FF81C0BE5B400BF9708 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		28F85DEEDBAFAAC5A2320568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-02-加载自定义控制器-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A6892FE41C0BE5B400BF9708 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */,
+				A6892FF01C0BE5B400BF9708 /* AppDelegate.m in Sources */,
+				3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */,
+				3E902BB124F6A679005747C4 /* HZMessageController.m in Sources */,
+				3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */,
+				3E0EAAC624EE9D5700C1B5B4 /* HZCollectionViewCell.m in Sources */,
+				A6892FED1C0BE5B400BF9708 /* main.m in Sources */,
+				3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */,
+				3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */,
+				3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */,
+				3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */,
+				3E0EAAC924EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		A6892FF91C0BE5B400BF9708 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A6892FFA1C0BE5B400BF9708 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A6892FFD1C0BE5B400BF9708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A6892FFE1C0BE5B400BF9708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A68930001C0BE5B400BF9708 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C69EB18C88C79191421133BB /* Pods-02-加载自定义控制器.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "02-加载自定义控制器/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2---------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A68930011C0BE5B400BF9708 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AB3B7C51EC33303FD5890EA /* Pods-02-加载自定义控制器.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "02-加载自定义控制器/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2---------";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A6892FE31C0BE5B300BF9708 /* Build configuration list for PBXProject "02-加载自定义控制器" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6892FFD1C0BE5B400BF9708 /* Debug */,
+				A6892FFE1C0BE5B400BF9708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6892FFF1C0BE5B400BF9708 /* Build configuration list for PBXNativeTarget "02-加载自定义控制器" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A68930001C0BE5B400BF9708 /* Debug */,
+				A68930011C0BE5B400BF9708 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A6892FE01C0BE5B300BF9708 /* Project object */;
+}
