@@ -13,6 +13,7 @@
 #import "HZlistloader.h"
 #import "HZMessageController.h"
 #import "HZVideoitem.h"
+#import "HZvideoViewCell.h"
 #define JkScreenHeight [UIScreen mainScreen].bounds.size.height
 #define JkScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ISiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -22,7 +23,7 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic,strong) HZlistloader *listloader;
 @property (nonatomic,strong) HZlistItem *dataitem;
-@property (nonatomic,strong) NSArray *aweme;
+
 @end
 
 @implementation MYViewController
@@ -39,29 +40,29 @@
     
     return self;
 }
-
--(NSArray *)aweme{
-    if(!_aweme)
-    {
-        NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
-        NSData *data=[NSData dataWithContentsOfFile:path];
-        
-//        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
-        
-//         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-        NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
-        NSMutableArray *array=[NSMutableArray array];
-        for(NSDictionary *dict in tempArray)
-        {
-            NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
-            HZVideoitem *p=[HZVideoitem ameweWithDict:info];
-            
-            [array addObject:p];
-        }
-        _aweme=array;
-    }
-    return _aweme;
-}
+//
+//-(NSArray *)aweme{
+//    if(!_aweme)
+//    {
+//        NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
+//        NSData *data=[NSData dataWithContentsOfFile:path];
+//
+////        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
+//
+////         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+//        NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
+//        NSMutableArray *array=[NSMutableArray array];
+//        for(NSDictionary *dict in tempArray)
+//        {
+//            NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
+//            HZVideoitem *p=[HZVideoitem ameweWithDict:info];
+//
+//            [array addObject:p];
+//        }
+//        _aweme=array;
+//    }
+//    return _aweme;
+//}
 - (UICollectionView *)collectionView
 {
    
@@ -85,7 +86,7 @@
     _collectionView.showsVerticalScrollIndicator = NO;
 
     //注册单元格
-    [_collectionView registerClass:[HZCollectionViewCell class] forCellWithReuseIdentifier:@"cell"];
+    [_collectionView registerClass:[HZvideoViewCell class] forCellWithReuseIdentifier:@"cell"];
      [_collectionView registerClass:[HZCollectionTopViewCell class] forCellWithReuseIdentifier:@"celltop"];
     //注册区头
     [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"topView"];
@@ -99,7 +100,22 @@
     [strongself.collectionView reloadData];
     }];
     
-    NSLog(@"@",self.aweme);
+     NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
+            NSData *data=[NSData dataWithContentsOfFile:path];
+            
+    //        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
+            
+    //         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+            NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
+            NSMutableArray *array=[NSMutableArray array];
+            for(NSDictionary *dict in tempArray)
+            {
+                NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
+                HZVideoitem *p=[HZVideoitem ameweWithDict:info];
+                
+                [array addObject:p];
+            }
+    self.aweme=array;
     return _collectionView;
 }
 
@@ -127,9 +143,13 @@
     }
     else
     {
-        HZCollectionViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+        HZvideoViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+//        if([cell isKindOfClass:[HZvideoViewCell class]])
+//        {
+            [cell layouyWithVideoCoverUrl:@"play" videoUrl:self.aweme[0]];
+//        }
         cell.backgroundColor = [UIColor greenColor];
-        [cell layoutclooectioncell];
+        
          return cell;
     }
 }

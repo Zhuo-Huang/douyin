@@ -11,7 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface MYViewController : UIViewController
-
+@property (nonatomic,strong) NSArray *aweme;
 @end
 
 NS_ASSUME_NONNULL_END

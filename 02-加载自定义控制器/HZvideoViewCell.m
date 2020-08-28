@@ -11,7 +11,8 @@
 @interface HZvideoViewCell()
 @property(nonatomic,strong,readwrite) UIImageView *coverView;
 @property(nonatomic,strong,readwrite) UIImageView *playButton;
-
+@property(nonatomic,copy,readwrite) NSString *videoUrl;
+-(void)_taptoplay;
 @end
 @implementation HZvideoViewCell
 
@@ -29,7 +30,22 @@
             _playButton.image=[UIImage imageNamed:@"play"];
             _playButton;
         })];
+        UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(_taptoplay)];
+        [self addGestureRecognizer:tapGesture];
     }
     return self;
+}
+
+-(void)_taptoplay
+{
+    NSLog(@"");
+}
+
+-(void)layouyWithVideoCoverUrl:(NSString*)videoCoverUrl videoUrl:(NSString *)videourl
+{
+    _playButton.image=[UIImage imageNamed:@"play"];
+    _coverView.image=[UIImage imageNamed:videourl];
+   
+    _videoUrl=videourl;
 }
 @end

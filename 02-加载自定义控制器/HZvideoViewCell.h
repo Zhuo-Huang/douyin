@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZvideoViewCell : UICollectionViewCell
+-(void)layouyWithVideoCoverUrl:(NSString*)videoCoverUrl videoUrl:(NSString *)videourl;
 -(instancetype)initWithFrame:(CGRect)frame;
 @end
 
