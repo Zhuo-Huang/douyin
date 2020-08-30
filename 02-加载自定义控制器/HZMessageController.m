@@ -10,6 +10,8 @@
 #import "HZlistItem.h"
 #import "HZlistloader.h"
 #import "SDWebImage.h"
+#import "HZProvinceViewController.h"
+#import "HZNameViewController.h"
 @interface HZMessageController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic,strong) HZlistItem *dataitem;
 @property (nonatomic,strong) HZlistloader *listloader;
@@ -132,10 +134,10 @@
 {
     if(indexPath.row==0)
     {
-        UIViewController *view1=[[UIViewController alloc]init];
-        view1.view.backgroundColor=[UIColor greenColor];
+        HZNameViewController *view1=[[HZNameViewController alloc] init];
+        view1.view.backgroundColor=[UIColor whiteColor];
         view1.navigationItem.title=@"修改名字";
-       
+        
         [self.navigationController pushViewController:view1 animated:YES];
         
     }
@@ -151,7 +153,12 @@
         view1.view.backgroundColor=[UIColor greenColor];
         [self.navigationController pushViewController:view1 animated:YES];
     }
-    
+    else if(indexPath.row==5)
+    {
+        HZProvinceViewController *view=[[HZProvinceViewController alloc]init];
+        view.view.backgroundColor=[UIColor yellowColor];
+        [self.navigationController pushViewController:view animated:YES];
+    }
     
 }
 /*

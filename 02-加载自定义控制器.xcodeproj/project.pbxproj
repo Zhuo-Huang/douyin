@@ -10,7 +10,9 @@
 		3E0EAAC624EE9D5700C1B5B4 /* HZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */; };
 		3E0EAAC924EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */; };
 		3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5595E024EE0AA5008322B7 /* MYViewController.m */; };
+		3E75E5BD24FA928A00EF18EB /* HZCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */; };
 		3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */; };
+		3E7D514A24FB702900FB99A6 /* HZNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D514924FB702900FB99A6 /* HZNameViewController.m */; };
 		3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */; };
 		3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */; };
 		3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */; };
@@ -18,6 +20,9 @@
 		3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DCFEE24EF4C7400CF434A /* HZViewController.m */; };
 		3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD01A24F014D200CF434A /* HZlistloader.m */; };
 		3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */; };
+		3EF7BA0424F8D7060080BCC3 /* HZProvince.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7BA0324F8D7060080BCC3 /* HZProvince.m */; };
+		3EF7BA0724F8D8050080BCC3 /* HZProvinceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF7BA0624F8D8050080BCC3 /* HZProvinceViewController.m */; };
+		3EF7BA0824F8E7A40080BCC3 /* 02cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3EF7BA0024F8D5540080BCC3 /* 02cities.plist */; };
 		A6892FED1C0BE5B400BF9708 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A6892FEC1C0BE5B400BF9708 /* main.m */; };
 		A6892FF01C0BE5B400BF9708 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A6892FEF1C0BE5B400BF9708 /* AppDelegate.m */; };
 		A6892FF81C0BE5B400BF9708 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6892FF71C0BE5B400BF9708 /* Assets.xcassets */; };
@@ -31,8 +36,12 @@
 		3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionTopViewCell.m; sourceTree = "<group>"; };
 		3E5595DF24EE0AA5008322B7 /* MYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
 		3E5595E024EE0AA5008322B7 /* MYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
+		3E75E5BB24FA928A00EF18EB /* HZCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCityViewController.h; sourceTree = "<group>"; };
+		3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCityViewController.m; sourceTree = "<group>"; };
 		3E7B60B624EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		3E7D514824FB702900FB99A6 /* HZNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZNameViewController.h; sourceTree = "<group>"; };
+		3E7D514924FB702900FB99A6 /* HZNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZNameViewController.m; sourceTree = "<group>"; };
 		3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "他人页作品数据.json"; path = "../../他人页作品数据.json"; sourceTree = "<group>"; };
 		3E8AE0C624F7F94E007A1796 /* HZVideoitem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZVideoitem.h; sourceTree = "<group>"; };
 		3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZVideoitem.m; sourceTree = "<group>"; };
@@ -46,6 +55,12 @@
 		3E9DD01A24F014D200CF434A /* HZlistloader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZlistloader.m; sourceTree = "<group>"; };
 		3ED9F4DE24F0A1C600E54E33 /* HZlistItem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZlistItem.h; sourceTree = "<group>"; };
 		3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZlistItem.m; sourceTree = "<group>"; };
+		3EF7BA0024F8D5540080BCC3 /* 02cities.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = 02cities.plist; sourceTree = "<group>"; };
+		3EF7BA0124F8D56A0080BCC3 /* 他人页作品数据.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "他人页作品数据.json"; sourceTree = "<group>"; };
+		3EF7BA0224F8D7060080BCC3 /* HZProvince.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZProvince.h; sourceTree = "<group>"; };
+		3EF7BA0324F8D7060080BCC3 /* HZProvince.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZProvince.m; sourceTree = "<group>"; };
+		3EF7BA0524F8D8050080BCC3 /* HZProvinceViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZProvinceViewController.h; sourceTree = "<group>"; };
+		3EF7BA0624F8D8050080BCC3 /* HZProvinceViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZProvinceViewController.m; sourceTree = "<group>"; };
 		8AB3B7C51EC33303FD5890EA /* Pods-02-加载自定义控制器.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-02-加载自定义控制器.release.xcconfig"; path = "Target Support Files/Pods-02-加载自定义控制器/Pods-02-加载自定义控制器.release.xcconfig"; sourceTree = "<group>"; };
 		A6892FE81C0BE5B400BF9708 /* 02-加载自定义控制器.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "02-加载自定义控制器.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6892FEC1C0BE5B400BF9708 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -96,6 +111,9 @@
 				3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */,
 				3E8AE0C624F7F94E007A1796 /* HZVideoitem.h */,
 				3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */,
+				3EF7BA0024F8D5540080BCC3 /* 02cities.plist */,
+				3EF7BA0224F8D7060080BCC3 /* HZProvince.h */,
+				3EF7BA0324F8D7060080BCC3 /* HZProvince.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -156,6 +174,12 @@
 				3E902BB024F6A679005747C4 /* HZMessageController.m */,
 				3E8AE0C924F80C2E007A1796 /* HZvideoViewCell.h */,
 				3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */,
+				3EF7BA0524F8D8050080BCC3 /* HZProvinceViewController.h */,
+				3EF7BA0624F8D8050080BCC3 /* HZProvinceViewController.m */,
+				3E75E5BB24FA928A00EF18EB /* HZCityViewController.h */,
+				3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */,
+				3E7D514824FB702900FB99A6 /* HZNameViewController.h */,
+				3E7D514924FB702900FB99A6 /* HZNameViewController.m */,
 			);
 			path = "02-加载自定义控制器";
 			sourceTree = "<group>";
@@ -164,6 +188,7 @@
 			isa = PBXGroup;
 			children = (
 				A6892FEC1C0BE5B400BF9708 /* main.m */,
+				3EF7BA0124F8D56A0080BCC3 /* 他人页作品数据.json */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -230,6 +255,7 @@
 				3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */,
 				A6892FFB1C0BE5B400BF9708 /* LaunchScreen.storyboard in Resources */,
 				A6892FF81C0BE5B400BF9708 /* Assets.xcassets in Resources */,
+				3EF7BA0824F8E7A40080BCC3 /* 02cities.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,11 +294,15 @@
 				3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */,
 				A6892FF01C0BE5B400BF9708 /* AppDelegate.m in Sources */,
 				3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */,
+				3E7D514A24FB702900FB99A6 /* HZNameViewController.m in Sources */,
 				3E902BB124F6A679005747C4 /* HZMessageController.m in Sources */,
 				3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */,
 				3E0EAAC624EE9D5700C1B5B4 /* HZCollectionViewCell.m in Sources */,
+				3EF7BA0724F8D8050080BCC3 /* HZProvinceViewController.m in Sources */,
 				A6892FED1C0BE5B400BF9708 /* main.m in Sources */,
 				3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */,
+				3EF7BA0424F8D7060080BCC3 /* HZProvince.m in Sources */,
+				3E75E5BD24FA928A00EF18EB /* HZCityViewController.m in Sources */,
 				3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */,
 				3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */,
 				3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */,

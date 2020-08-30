@@ -28,7 +28,6 @@
 
 @implementation MYViewController
 
-
 -(instancetype) init{
     self=[super init];
     if(self)
@@ -37,85 +36,64 @@
 //        self.automaticallyAdjustsScrollViewInsets = YES;
       
     }
-    
     return self;
 }
-//
-//-(NSArray *)aweme{
-//    if(!_aweme)
-//    {
-//        NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
-//        NSData *data=[NSData dataWithContentsOfFile:path];
-//
-////        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
-//
-////         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-//        NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
-//        NSMutableArray *array=[NSMutableArray array];
-//        for(NSDictionary *dict in tempArray)
-//        {
-//            NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
-//            HZVideoitem *p=[HZVideoitem ameweWithDict:info];
-//
-//            [array addObject:p];
-//        }
-//        _aweme=array;
-//    }
-//    return _aweme;
-//}
 - (UICollectionView *)collectionView
 {
-   
-    HZCollectionViewFlowLayout *flowlayout = [[HZCollectionViewFlowLayout alloc] init];
-    //设置悬停高度，默认64
-    flowlayout.naviHeight = ISiPhoneX?88:64;
-    //设置滚动方向
-    [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
-    //左右间距
-    flowlayout.minimumInteritemSpacing = 1;
-    //上下间距
-    flowlayout.minimumLineSpacing = 1;
-    flowlayout.sectionInset = UIEdgeInsetsMake(0, 2, 0, 2);
     if (!_collectionView) {
-        self.collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0 , 0 , JkScreenWidth, JkScreenHeight) collectionViewLayout:flowlayout];
-    }
-    _collectionView.delegate = self;
-    _collectionView.dataSource = self;
+        HZCollectionViewFlowLayout *flowlayout = [[HZCollectionViewFlowLayout alloc] init];
+        //设置悬停高度，默认64
+        flowlayout.naviHeight = ISiPhoneX?88:64;
+        //设置滚动方向
+        [flowlayout setScrollDirection:UICollectionViewScrollDirectionVertical];
+        //左右间距
+        flowlayout.minimumInteritemSpacing = 1;
+        //上下间距
+        flowlayout.minimumLineSpacing = 1;
+        flowlayout.sectionInset = UIEdgeInsetsMake(0, 2, 0, 2);
 
-    [_collectionView setBackgroundColor:[UIColor clearColor]];
-    _collectionView.showsVerticalScrollIndicator = NO;
+        _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0 , 0 , JkScreenWidth, JkScreenHeight) collectionViewLayout:flowlayout];
+        
+        _collectionView.delegate = self;
+        _collectionView.dataSource = self;
 
-    //注册单元格
-    [_collectionView registerClass:[HZvideoViewCell class] forCellWithReuseIdentifier:@"cell"];
-     [_collectionView registerClass:[HZCollectionTopViewCell class] forCellWithReuseIdentifier:@"celltop"];
-    //注册区头
-    [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"topView"];
-    
-    __weak typeof(self)wself=self;
-                  
-    [self.listloader loadListDataWithFinishBlock:^(BOOL success, HZlistItem * dataitem) {
-        __strong typeof(wself) strongself=wself;
-        strongself.dataitem=dataitem;
-    
-    [strongself.collectionView reloadData];
-    }];
-    
-     NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
-            NSData *data=[NSData dataWithContentsOfFile:path];
-            
-    //        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
-            
-    //         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-            NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
-            NSMutableArray *array=[NSMutableArray array];
-            for(NSDictionary *dict in tempArray)
-            {
-                NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
-                HZVideoitem *p=[HZVideoitem ameweWithDict:info];
+        [_collectionView setBackgroundColor:[UIColor clearColor]];
+        _collectionView.showsVerticalScrollIndicator = NO;
+
+        //注册单元格
+        [_collectionView registerClass:[HZvideoViewCell class] forCellWithReuseIdentifier:@"cell"];
+         [_collectionView registerClass:[HZCollectionTopViewCell class] forCellWithReuseIdentifier:@"celltop"];
+        //注册区头
+        [_collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind: UICollectionElementKindSectionHeader withReuseIdentifier:@"topView"];
+        
+        __weak typeof(self)wself=self;
+                      
+        [self.listloader loadListDataWithFinishBlock:^(BOOL success, HZlistItem * dataitem) {
+            __strong typeof(wself) strongself=wself;
+            strongself.dataitem=dataitem;
+        
+            [strongself.collectionView reloadData];
+        }];
+        
+         NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
+                NSData *data=[NSData dataWithContentsOfFile:path];
                 
-                [array addObject:p];
-            }
-    self.aweme=array;
+        //        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
+                
+        //         NSArray * tempArray=[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
+                NSArray * tempArray=[[NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil]objectForKey:@"aweme_list" ];
+                NSMutableArray *array=[NSMutableArray array];
+                for(NSDictionary *dict in tempArray)
+                {
+                    NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
+                    HZVideoitem *p=[HZVideoitem ameweWithDict:info];
+                    
+                    [array addObject:p];
+                }
+        self.aweme=array;
+    }
+    
+    
     return _collectionView;
 }
 
@@ -223,19 +201,6 @@
 
     [self.view addSubview:self.collectionView];
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
 
 

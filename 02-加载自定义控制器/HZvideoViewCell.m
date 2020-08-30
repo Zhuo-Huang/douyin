@@ -7,14 +7,28 @@
 //
 
 #import "HZvideoViewCell.h"
-
+#import <AVFoundation/AVFoundation.h>
 @interface HZvideoViewCell()
 @property(nonatomic,strong,readwrite) UIImageView *coverView;
 @property(nonatomic,strong,readwrite) UIImageView *playButton;
 @property(nonatomic,copy,readwrite) NSString *videoUrl;
+@property(nonatomic,strong,readwrite) UIView *playerView;
+@property(nonatomic,strong,readwrite) AVPlayer *player;
 -(void)_taptoplay;
 @end
 @implementation HZvideoViewCell
+
+- (void)prepareForReuse
+{
+    if (_player) {
+        [_player pause];
+        _player = nil;
+    }
+    
+    [self.playerView.layer.sublayers enumerateObjectsUsingBlock:^(__kindof CALayer * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        [obj removeFromSuperlayer];
+    }];
+}
 
 -(instancetype)initWithFrame:(CGRect)frame
 {
@@ -30,6 +44,8 @@
             _playButton.image=[UIImage imageNamed:@"play"];
             _playButton;
         })];
+        [self addSubview:self.playerView];
+        self.playerView.frame = CGRectMake(0, 0, frame.size.width, frame.size.height);
         UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(_taptoplay)];
         [self addGestureRecognizer:tapGesture];
     }
@@ -38,14 +54,31 @@
 
 -(void)_taptoplay
 {
-    NSLog(@"");
+    NSURL *videourl=[NSURL URLWithString:_videoUrl];
+    AVAsset *asset=[AVAsset assetWithURL:videourl];
+    AVPlayerItem *videoItem= [AVPlayerItem playerItemWithAsset:asset];
+    AVPlayer *avplayer=[AVPlayer playerWithPlayerItem:videoItem];
+    AVPlayerLayer *playerlayer=[AVPlayerLayer playerLayerWithPlayer:avplayer];
+    playerlayer.frame=_playerView.bounds;
+    [self.playerView.layer addSublayer:playerlayer];
+    [avplayer play];
+    self.player = avplayer;
+}
+
+- (UIView *)playerView
+{
+    if (!_playerView) {
+        _playerView = [UIView new];
+    }
+    return _playerView;
 }
 
 -(void)layouyWithVideoCoverUrl:(NSString*)videoCoverUrl videoUrl:(NSString *)videourl
 {
     _playButton.image=[UIImage imageNamed:@"play"];
-    _coverView.image=[UIImage imageNamed:videourl];
-   
-    _videoUrl=videourl;
+//    _coverView.image=[UIImage imageNamed:videourl];
+    _coverView.image=[UIImage imageNamed:@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4"];
+//    _videoUrl=videourl;
+    _videoUrl=@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4";
 }
 @end
