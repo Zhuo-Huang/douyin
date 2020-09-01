@@ -11,10 +11,10 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZMessageController : UIViewController
-@property(nonatomic,strong) UIImageView *u_imageview;
 @property(nonatomic,strong) UILabel *u_name;
 @property (nonatomic, copy) void (^clickidHandler)(void);
 -(void)removepickview;
+-(void)addpicture;
 @end
 
 NS_ASSUME_NONNULL_END

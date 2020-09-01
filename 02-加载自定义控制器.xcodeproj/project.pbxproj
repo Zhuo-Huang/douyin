@@ -18,6 +18,7 @@
 		3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */; };
 		3E902BB124F6A679005747C4 /* HZMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E902BB024F6A679005747C4 /* HZMessageController.m */; };
 		3E9CEA9724FE50C500D05689 /* NSString+UITextField_Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CEA9624FE50C500D05689 /* NSString+UITextField_Expand.m */; };
+		3E9CEA9F24FE854800D05689 /* ImagePickerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CEA9E24FE854800D05689 /* ImagePickerManager.m */; };
 		3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DCFEE24EF4C7400CF434A /* HZViewController.m */; };
 		3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD01A24F014D200CF434A /* HZlistloader.m */; };
 		3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */; };
@@ -52,6 +53,8 @@
 		3E902BB024F6A679005747C4 /* HZMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZMessageController.m; sourceTree = "<group>"; };
 		3E9CEA9524FE50C500D05689 /* NSString+UITextField_Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UITextField_Expand.h"; sourceTree = "<group>"; };
 		3E9CEA9624FE50C500D05689 /* NSString+UITextField_Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UITextField_Expand.m"; sourceTree = "<group>"; };
+		3E9CEA9D24FE854300D05689 /* ImagePickerManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ImagePickerManager.h; path = "../../../Downloads/DemoImagePicker 2/ImagePickerManager/ImagePickerManager.h"; sourceTree = "<group>"; };
+		3E9CEA9E24FE854800D05689 /* ImagePickerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ImagePickerManager.m; path = "../../../Downloads/DemoImagePicker 2/ImagePickerManager/ImagePickerManager.m"; sourceTree = "<group>"; };
 		3E9DCFED24EF4C7400CF434A /* HZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZViewController.h; sourceTree = "<group>"; };
 		3E9DCFEE24EF4C7400CF434A /* HZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZViewController.m; sourceTree = "<group>"; };
 		3E9DD01924F014D200CF434A /* HZlistloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZlistloader.h; sourceTree = "<group>"; };
@@ -167,6 +170,8 @@
 				3E5595E024EE0AA5008322B7 /* MYViewController.m */,
 				3E7B60B624EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.h */,
 				3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */,
+				3E9CEA9D24FE854300D05689 /* ImagePickerManager.h */,
+				3E9CEA9E24FE854800D05689 /* ImagePickerManager.m */,
 				3E0EAAC424EE9D5700C1B5B4 /* HZCollectionViewCell.h */,
 				3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */,
 				3E0EAAC724EEDE2F00C1B5B4 /* HZCollectionTopViewCell.h */,
@@ -297,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */,
+				3E9CEA9F24FE854800D05689 /* ImagePickerManager.m in Sources */,
 				A6892FF01C0BE5B400BF9708 /* AppDelegate.m in Sources */,
 				3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */,
 				3E7D514A24FB702900FB99A6 /* HZNameViewController.m in Sources */,

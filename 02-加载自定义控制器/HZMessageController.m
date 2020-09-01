@@ -12,7 +12,12 @@
 #import "SDWebImage.h"
 #import "HZProvinceViewController.h"
 #import "HZNameViewController.h"
-@interface HZMessageController ()<UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource>
+#import "ImagePickerManager.h"
+#import <AssetsLibrary/AssetsLibrary.h>//资产库框架
+#import <MobileCoreServices/MobileCoreServices.h>//移动核心服务框架
+@interface HZMessageController ()<UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+
+@property(nonatomic,strong)UIImagePickerController *picker;
 @property (nonatomic,strong) HZlistItem *dataitem;
 @property (nonatomic,strong) HZlistloader *listloader;
 @property (nonatomic,strong) UITableView *tableView;
@@ -20,6 +25,9 @@
 @property(nonatomic,strong) UIPickerView *pickerview;
 @property(nonatomic,strong) UIView *viewv;
 @property(nonatomic,strong) UIView *removeview;
+@property(nonatomic,strong) ImagePickerManager *imagePicker;
+@property(nonatomic,strong) UIImageView *u_imageview;
+
 @end
 
 @implementation HZMessageController
@@ -52,7 +60,7 @@
     pickerView.dataSource=self;
     pickerView.delegate=self;
     self.pickerview=pickerView;
-   
+   [self pickerView:self.pickerview didSelectRow:0 inComponent:0];
     
     UIView *view=[[UIView alloc]initWithFrame:CGRectMake(100, 150, 100, 150)];
     tableview.tableHeaderView=view;
@@ -63,6 +71,13 @@
 //        self.u_imageview.contentMode = UIViewContentModeCenter;
         self.u_imageview;
         })];
+    
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(addpicture)];
+     self.u_imageview.userInteractionEnabled=YES;
+    [self.u_imageview addGestureRecognizer:tapGesture];
+    
+
+    
     
      [view addSubview:({
             UILabel* u_name=[[UILabel alloc]initWithFrame:CGRectMake(130, 105, 40, 20)];
@@ -227,7 +242,7 @@
         
         UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(removepickview)];
         [self.removeview addGestureRecognizer:tapGesture];
-        
+    
         [self pickerView:self.pickerview didSelectRow:0 inComponent:0];
     }
     else if(indexPath.row==4)
@@ -253,6 +268,27 @@
 -(void)removepickview
 {
     [self.viewv removeFromSuperview];
+}
+-(void)addpicture
+{
+    self.imagePicker = [[ImagePickerManager alloc] init];
+       self.imagePicker.pickerType = UIImagePickerControllerSourceTypePhotoLibrary;
+       if ([self.imagePicker exceptionHandlingwithSourceType])
+       {
+           [self presentViewController:self.imagePicker animated:YES completion:NULL];
+           
+           [self.imagePicker getPickerImage:^(UIImage *image) {
+            
+            
+            
+               self.u_imageview.image=image;
+            
+            
+        } withError:^{
+            
+            
+        }];
+    }
 }
 /*
 #pragma mark - Navigation
