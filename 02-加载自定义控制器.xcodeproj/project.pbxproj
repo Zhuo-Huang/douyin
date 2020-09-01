@@ -17,6 +17,7 @@
 		3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */; };
 		3E8AE0CB24F80C2E007A1796 /* HZvideoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */; };
 		3E902BB124F6A679005747C4 /* HZMessageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E902BB024F6A679005747C4 /* HZMessageController.m */; };
+		3E9CEA9724FE50C500D05689 /* NSString+UITextField_Expand.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9CEA9624FE50C500D05689 /* NSString+UITextField_Expand.m */; };
 		3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DCFEE24EF4C7400CF434A /* HZViewController.m */; };
 		3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E9DD01A24F014D200CF434A /* HZlistloader.m */; };
 		3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED9F4DF24F0A1C600E54E33 /* HZlistItem.m */; };
@@ -49,6 +50,8 @@
 		3E8AE0CA24F80C2E007A1796 /* HZvideoViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZvideoViewCell.m; sourceTree = "<group>"; };
 		3E902BAF24F6A679005747C4 /* HZMessageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZMessageController.h; sourceTree = "<group>"; };
 		3E902BB024F6A679005747C4 /* HZMessageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZMessageController.m; sourceTree = "<group>"; };
+		3E9CEA9524FE50C500D05689 /* NSString+UITextField_Expand.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+UITextField_Expand.h"; sourceTree = "<group>"; };
+		3E9CEA9624FE50C500D05689 /* NSString+UITextField_Expand.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+UITextField_Expand.m"; sourceTree = "<group>"; };
 		3E9DCFED24EF4C7400CF434A /* HZViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZViewController.h; sourceTree = "<group>"; };
 		3E9DCFEE24EF4C7400CF434A /* HZViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZViewController.m; sourceTree = "<group>"; };
 		3E9DD01924F014D200CF434A /* HZlistloader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZlistloader.h; sourceTree = "<group>"; };
@@ -180,6 +183,8 @@
 				3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */,
 				3E7D514824FB702900FB99A6 /* HZNameViewController.h */,
 				3E7D514924FB702900FB99A6 /* HZNameViewController.m */,
+				3E9CEA9524FE50C500D05689 /* NSString+UITextField_Expand.h */,
+				3E9CEA9624FE50C500D05689 /* NSString+UITextField_Expand.m */,
 			);
 			path = "02-加载自定义控制器";
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 				3ED9F4E024F0A1C600E54E33 /* HZlistItem.m in Sources */,
 				3EF7BA0424F8D7060080BCC3 /* HZProvince.m in Sources */,
 				3E75E5BD24FA928A00EF18EB /* HZCityViewController.m in Sources */,
+				3E9CEA9724FE50C500D05689 /* NSString+UITextField_Expand.m in Sources */,
 				3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */,
 				3E9DCFEF24EF4C7400CF434A /* HZViewController.m in Sources */,
 				3E9DD01B24F014D200CF434A /* HZlistloader.m in Sources */,

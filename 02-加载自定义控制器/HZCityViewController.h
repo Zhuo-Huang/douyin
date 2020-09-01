@@ -12,6 +12,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HZCityViewController : UIViewController
 @property (nonatomic,assign) NSInteger provin;
+@property (nonatomic, copy) void (^clickEditHandler)(NSString *name);
 @end
 
 NS_ASSUME_NONNULL_END

@@ -14,6 +14,7 @@
 #import "HZMessageController.h"
 #import "HZVideoitem.h"
 #import "HZvideoViewCell.h"
+#import <AVFoundation/AVFoundation.h>
 #define JkScreenHeight [UIScreen mainScreen].bounds.size.height
 #define JkScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ISiPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) UICollectionView *collectionView;
 @property (nonatomic,strong) HZlistloader *listloader;
 @property (nonatomic,strong) HZlistItem *dataitem;
+@property(nonatomic,strong,readwrite) AVPlayer *player;
 
 @end
 
@@ -107,8 +109,7 @@
         {
             HZMessageController *view=[[HZMessageController alloc] init];
             view.view.backgroundColor=[UIColor blackColor];
-            view.navigationItem.title=@"编辑资料";
-            
+            view.navigationItem.title=@"编辑资料";            
             [self.navigationController pushViewController:view animated:YES];
         };
         cell.backgroundColor =[UIColor redColor];
@@ -116,16 +117,33 @@
     
         
         [cell layoutTopViewWithItem:self.dataitem];
-//        [cell layoutTopView];
         return cell;
     }
     else
     {
         HZvideoViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-//        if([cell isKindOfClass:[HZvideoViewCell class]])
-//        {
             [cell layouyWithVideoCoverUrl:@"play" videoUrl:self.aweme[0]];
-//        }
+        cell.clickEditHandler = ^()
+        {
+            UIViewController *view=[[UIViewController alloc] init];
+            view.view.backgroundColor=[UIColor blackColor];
+            
+            [self.navigationController pushViewController:view animated:YES];
+            NSString *videoUrl=@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4";
+        
+            
+            NSURL *videourl=[NSURL URLWithString:videoUrl];
+              AVAsset *asset=[AVAsset assetWithURL:videourl];
+              AVPlayerItem *videoItem= [AVPlayerItem playerItemWithAsset:asset];
+              AVPlayer *avplayer=[AVPlayer playerWithPlayerItem:videoItem];
+              AVPlayerLayer *playerlayer=[AVPlayerLayer playerLayerWithPlayer:avplayer];
+//              playerlayer.frame=_playerView.bounds;
+            playerlayer.frame=[UIScreen mainScreen].bounds;
+              [view.view.layer addSublayer:playerlayer];
+              [avplayer play];
+            self.player= avplayer;
+        
+        };
         cell.backgroundColor = [UIColor greenColor];
         
          return cell;

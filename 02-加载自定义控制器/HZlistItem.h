@@ -20,6 +20,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,copy,readwrite) NSString* aweme;
 @property (nonatomic,copy,readwrite) NSString* like;
 @property (nonatomic,copy,readwrite) NSString* url;
+@property (nonatomic,copy,readwrite) NSString* city;
+@property (nonatomic,copy,readwrite) NSString* sex;
 -(void)configWithDictionary:(NSDictionary*)dictonary;
 @end
 

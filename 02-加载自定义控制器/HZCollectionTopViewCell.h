@@ -20,7 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UILabel *u_detail;
 @property(nonatomic,strong) UIImageView *u_imageview;
 @property (nonatomic, copy) void (^clickEditHandler)(void);
-
+@property (nonatomic, copy) void (^clickidHandler)(void);
 
 -(void)pushController;
 -(void)layoutTopViewWithItem:(HZlistItem*)item;

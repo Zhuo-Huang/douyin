@@ -8,6 +8,7 @@
 
 #import "HZNameViewController.h"
 #import "HZMessageController.h"
+#import "NSString+UITextField_Expand.h"
 @interface HZNameViewController ()<UITextFieldDelegate>
 @property (nonatomic,strong) HZMessageController *message;
 @end
@@ -36,35 +37,67 @@
         self.textfield.borderStyle=UITextBorderStyleRoundedRect;
             self.textfield;
             })];
+    
+    [self.textfield lengthLimit:^{
+           if (self.textfield.text.length > 20) {
+               self.textfield.text = [self.textfield.text substringToIndex:20];
+           }
+        self.length.text=
+            [NSString stringWithFormat:@"%lu/20",self.textfield.text.length];
+            [self.length sizeToFit];
+            NSLog(@"%lu",self.textfield.text.length);
+
+       }];
+       
     // Do any additional setup after loading the view.
     [self.view addSubview:({
             self.length=[[UILabel alloc]initWithFrame:CGRectMake(30, 160, 40, 20)];
     //        self.followed.backgroundColor = [UIColor grayColor];
             self.length.textColor=[UIColor blackColor];
-        self.length.text=@"0/20";
+        
             self.length.font=[UIFont systemFontOfSize:14];
             self.length;
             })];
+    self.messageButton = [[UIButton alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width)/2+50, 200, 10, 10)];
+    self.messageButton.backgroundColor = [UIColor grayColor];
+    self.messageButton.font = [UIFont fontWithName:@"Verdana-Bold"size:17];
+    [self.messageButton setTitle:@"保存" forState:UIControlStateNormal];
+    [self.messageButton sizeToFit];
+     [self.view addSubview:self.messageButton];
+    
+    UITapGestureRecognizer *tapGesture=[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(pushController)];
+           [self.messageButton addGestureRecognizer:tapGesture];
 }
-- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
-{
-    self.length.text=
-    [NSString stringWithFormat:@"%lu/20",self.textfield.text.length+1];
-    [self.length sizeToFit];
+//- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+//{
+//    
+//
+//    self.length.text=
+//    [NSString stringWithFormat:@"%lu/20",self.textfield.text.length];
+//    [self.length sizeToFit];
 //    NSLog(@"%lu",self.textfield.text.length);
-    if (self.textfield.text.length+1 >= 20) {
-        return NO;
-    }
-    return YES;
-}// return NO to not change text
+//    if (self.textfield.text.length >= 20) {
+//        return NO;
+//    }
+//    return YES;
+//}// return NO to not change text
 
 
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [self.textfield resignFirstResponder];
+    
     NSLog(@"%@",self.textfield.text);
     return YES;
 }
+-(void)pushController{
+    if (self.clickEditHandler) {
+        self.clickEditHandler(self.textfield.text);
+    }
+//    self.navigationController.view.backgroundColor=[UIColor blueColor];
+}
+@end
+
 /*
 #pragma mark - Navigation
 
@@ -74,5 +107,3 @@
     // Pass the selected object to the new view controller.
 }
 */
-
-@end

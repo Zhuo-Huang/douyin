@@ -11,7 +11,8 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HZProvinceViewController : UIViewController
-
+@property (nonatomic,strong) NSString *city;
+@property (nonatomic, copy) void (^clickEditcity)(NSString *name);
 @end
 
 NS_ASSUME_NONNULL_END

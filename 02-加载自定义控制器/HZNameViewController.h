@@ -14,6 +14,9 @@ NS_ASSUME_NONNULL_BEGIN
 @property(nonatomic,strong) UILabel *name;
 @property(nonatomic,strong) UITextField *textfield;
 @property(nonatomic,strong) UILabel *length;
+@property (strong, nonatomic) UIButton *messageButton;
+@property (nonatomic, copy) void (^clickEditHandler)(NSString *name);
+-(void)pushController;
 @end
 
 NS_ASSUME_NONNULL_END

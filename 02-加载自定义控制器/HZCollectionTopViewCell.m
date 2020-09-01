@@ -126,6 +126,14 @@
                                completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
         NSLog(@"");
     }];
+//
+//    __weak __typeof(self) weakSelf = self;
+//            view1.clickEditHandler = ^(NSString * _Nonnull name) {
+//                __strong __typeof(weakSelf) strongSelf = weakSelf;
+//                strongSelf.dataitem.nickname = name;
+//                [strongSelf.tableView reloadRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:0 inSection:0]] withRowAnimation:UITableViewRowAnimationNone];
+//
+//            };
 }
 -(void)pushController{
 //    NSLog(@"hello world");

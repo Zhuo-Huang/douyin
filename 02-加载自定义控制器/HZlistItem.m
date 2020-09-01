@@ -20,6 +20,8 @@
     self.aweme=[dictonary objectForKey:@"aweme"];
     self.like=[dictonary objectForKey:@"favoriting_count"];
     self.url=[[dictonary objectForKey:@"avatar_thumb"] objectForKey:@"url_list"][0];
+    self.city=@"";
+    self.sex=@"";
 }
 
 @end

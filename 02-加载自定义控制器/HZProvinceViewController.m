@@ -63,7 +63,19 @@
     HZCityViewController *view=[[HZCityViewController alloc] init];
     view.provin=indexPath.row;
     
-    view.view.backgroundColor=[UIColor yellowColor];
+    __weak __typeof(self) weakSelf = self;
+           view.clickEditHandler = ^(NSString * _Nonnull name) {
+               __strong __typeof(weakSelf) strongSelf = weakSelf;
+               strongSelf.city=[NSString stringWithFormat:@"%@ %@",n.name,name];
+         
+//               +[NSString stringWithFormat:@"%@",name];
+    
+               if (self.clickEditcity) {
+                   self.clickEditcity(strongSelf.city);
+               }
+               [self.navigationController popViewControllerAnimated:self];
+           };
+
     [self.navigationController pushViewController:view animated:YES];
 }
 @end

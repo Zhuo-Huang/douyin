@@ -54,15 +54,10 @@
 
 -(void)_taptoplay
 {
-    NSURL *videourl=[NSURL URLWithString:_videoUrl];
-    AVAsset *asset=[AVAsset assetWithURL:videourl];
-    AVPlayerItem *videoItem= [AVPlayerItem playerItemWithAsset:asset];
-    AVPlayer *avplayer=[AVPlayer playerWithPlayerItem:videoItem];
-    AVPlayerLayer *playerlayer=[AVPlayerLayer playerLayerWithPlayer:avplayer];
-    playerlayer.frame=_playerView.bounds;
-    [self.playerView.layer addSublayer:playerlayer];
-    [avplayer play];
-    self.player = avplayer;
+    if (self.clickEditHandler) {
+    self.clickEditHandler();
+    }
+
 }
 
 - (UIView *)playerView

@@ -57,6 +57,14 @@
     cell.textLabel.text=n.cities[indexPath.row];
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    HZProvince *n=self.provinces[self.provin];
+    if (self.clickEditHandler) {
+        self.clickEditHandler(n.cities[indexPath.row]);
+        [self.navigationController popViewControllerAnimated:self];
+    }
+}
 
 /*
 #pragma mark - Navigation
