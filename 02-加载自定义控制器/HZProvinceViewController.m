@@ -73,7 +73,11 @@
                if (self.clickEditcity) {
                    self.clickEditcity(strongSelf.city);
                }
-               [self.navigationController popViewControllerAnimated:self];
+               if (self.navigationController.viewControllers.count >= 1) {
+                   UIViewController *root = [self.navigationController.viewControllers objectAtIndex:1];
+                   [self.navigationController popToViewController:root animated:self];
+
+               }
            };
 
     [self.navigationController pushViewController:view animated:YES];

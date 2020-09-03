@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface HZVideoitem : NSObject
 @property (nonatomic,copy) NSString *url;
-
-+(instancetype)ameweWithDict:(NSDictionary*)dict;
+@property (nonatomic,copy) NSString *coverurl;
+@property (nonatomic,copy,readwrite) NSString* aweme_count;
++(instancetype)ameweWithDict:(NSDictionary*)dict1:(NSDictionary*)dict2;
 @end
 
 NS_ASSUME_NONNULL_END

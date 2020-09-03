@@ -10,10 +10,11 @@
 
 @implementation HZVideoitem
 
-+(instancetype)ameweWithDict:(NSDictionary*)dict
++(instancetype)ameweWithDict:(NSDictionary*)dict1:(NSDictionary*)dict2;
 {
     HZVideoitem *p=[[self alloc] init];
-    p.url=dict[@"url_list"][0];
+    p.url=dict1[@"url_list"][2];
+    p.coverurl=dict2[@"url_list"][0];
     return p;
 }
 @end

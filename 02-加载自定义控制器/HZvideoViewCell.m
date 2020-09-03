@@ -8,6 +8,7 @@
 
 #import "HZvideoViewCell.h"
 #import <AVFoundation/AVFoundation.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 @interface HZvideoViewCell()
 @property(nonatomic,strong,readwrite) UIImageView *coverView;
 @property(nonatomic,strong,readwrite) UIImageView *playButton;
@@ -54,8 +55,10 @@
 
 -(void)_taptoplay
 {
+    NSLog(@"");
+    NSString* url=[NSString stringWithFormat:@"%@", _videoUrl];
     if (self.clickEditHandler) {
-    self.clickEditHandler();
+        self.clickEditHandler(url);
     }
 
 }
@@ -70,10 +73,16 @@
 
 -(void)layouyWithVideoCoverUrl:(NSString*)videoCoverUrl videoUrl:(NSString *)videourl
 {
-    _playButton.image=[UIImage imageNamed:@"play"];
-//    _coverView.image=[UIImage imageNamed:videourl];
-    _coverView.image=[UIImage imageNamed:@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4"];
-//    _videoUrl=videourl;
-    _videoUrl=@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4";
+    _playButton.image=[UIImage imageNamed:videoCoverUrl];
+//    _coverView.image=[UIImage imageNamed:videoCoverUrl];
+//    _coverView.image=[UIImage imageNamed:@"https://p29-dy.byteimg.com/img/tos-cn-p-0015/156fb531013a4ba18aabbca51196a601~c5_300x400.jpeg?from=2563711402_large"];
+    _videoUrl=videourl;
+//
+    
+    
+//    NSURL *photourl = [NSURL URLWithString:videoCoverUrl];
+//    //url请求实在UI主线程中进行的
+//    UIImage *images = [UIImage imageWithData:[NSData dataWithContentsOfURL:photourl]];//通过网络url获取uiimage
+    [self.coverView sd_setImageWithURL:[NSURL URLWithString:videoCoverUrl]];
 }
 @end

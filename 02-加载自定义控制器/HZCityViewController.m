@@ -62,7 +62,7 @@
     HZProvince *n=self.provinces[self.provin];
     if (self.clickEditHandler) {
         self.clickEditHandler(n.cities[indexPath.row]);
-        [self.navigationController popViewControllerAnimated:self];
+//        [self.navigationController popViewControllerAnimated:self];
     }
 }
 

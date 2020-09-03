@@ -17,7 +17,7 @@
 -(NSArray *)aweme{
     if(_aweme)
     {
-        NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
+        NSString *path= [[NSBundle mainBundle]pathForResource:@"鞠婧祎" ofType:@"json"];
         NSData *data=[NSData dataWithContentsOfFile:path];
         
 //        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
@@ -28,7 +28,8 @@
         for(NSDictionary *dict in tempArray)
         {
             NSDictionary *info =[[[(dict) objectForKey:@"author" ]objectForKey:@"video"]objectForKey:@"play_addr"] ;
-            HZVideoitem *p=[HZVideoitem ameweWithDict:dict];
+            
+            HZVideoitem *p=[HZVideoitem ameweWithDict:dict:dict];
             
             [array addObject:p];
         }

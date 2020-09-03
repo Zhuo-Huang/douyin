@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		3E0EAAC624EE9D5700C1B5B4 /* HZCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */; };
 		3E0EAAC924EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */; };
+		3E23447724FF706D00BD46E5 /* 鞠婧祎.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E23447624FF706D00BD46E5 /* 鞠婧祎.json */; };
 		3E5595E124EE0AA5008322B7 /* MYViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5595E024EE0AA5008322B7 /* MYViewController.m */; };
 		3E75E5BD24FA928A00EF18EB /* HZCityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */; };
 		3E7B60B824EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */; };
+		3E7BC00D24FFACB500B664AB /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E7BC00C24FFACB500B664AB /* CoreFoundation.framework */; };
 		3E7D514A24FB702900FB99A6 /* HZNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D514924FB702900FB99A6 /* HZNameViewController.m */; };
 		3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */; };
 		3E8AE0C824F7F94E007A1796 /* HZVideoitem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8AE0C724F7F94E007A1796 /* HZVideoitem.m */; };
@@ -36,12 +38,15 @@
 		3E0EAAC524EE9D5700C1B5B4 /* HZCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionViewCell.m; sourceTree = "<group>"; };
 		3E0EAAC724EEDE2F00C1B5B4 /* HZCollectionTopViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionTopViewCell.h; sourceTree = "<group>"; };
 		3E0EAAC824EEDE2F00C1B5B4 /* HZCollectionTopViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionTopViewCell.m; sourceTree = "<group>"; };
+		3E23447624FF706D00BD46E5 /* 鞠婧祎.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "鞠婧祎.json"; sourceTree = "<group>"; };
+		3E23447924FFAB8300BD46E5 /* XcodeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XcodeKit.framework; path = Library/Frameworks/XcodeKit.framework; sourceTree = DEVELOPER_DIR; };
 		3E5595DF24EE0AA5008322B7 /* MYViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYViewController.h; sourceTree = "<group>"; };
 		3E5595E024EE0AA5008322B7 /* MYViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYViewController.m; sourceTree = "<group>"; };
 		3E75E5BB24FA928A00EF18EB /* HZCityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCityViewController.h; sourceTree = "<group>"; };
 		3E75E5BC24FA928A00EF18EB /* HZCityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCityViewController.m; sourceTree = "<group>"; };
 		3E7B60B624EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZCollectionViewFlowLayout.h; sourceTree = "<group>"; };
 		3E7B60B724EE6BDE00ECD2B7 /* HZCollectionViewFlowLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		3E7BC00C24FFACB500B664AB /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		3E7D514824FB702900FB99A6 /* HZNameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HZNameViewController.h; sourceTree = "<group>"; };
 		3E7D514924FB702900FB99A6 /* HZNameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HZNameViewController.m; sourceTree = "<group>"; };
 		3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = "他人页作品数据.json"; path = "../../他人页作品数据.json"; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E7BC00D24FFACB500B664AB /* CoreFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +102,15 @@
 				8AB3B7C51EC33303FD5890EA /* Pods-02-加载自定义控制器.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		3E23447824FFAB8300BD46E5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E7BC00C24FFACB500B664AB /* CoreFoundation.framework */,
+				3E23447924FFAB8300BD46E5 /* XcodeKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		3E9DD01824F014A100CF434A /* usermessage */ = {
@@ -144,6 +159,7 @@
 				A6892FEA1C0BE5B400BF9708 /* 02-加载自定义控制器 */,
 				A6892FE91C0BE5B400BF9708 /* Products */,
 				1A0FF49702811E450088E63F /* Pods */,
+				3E23447824FFAB8300BD46E5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,6 +178,7 @@
 				A6892FEE1C0BE5B400BF9708 /* AppDelegate.h */,
 				A6892FEF1C0BE5B400BF9708 /* AppDelegate.m */,
 				3E8AE0C424F7F3E7007A1796 /* 他人页作品数据.json */,
+				3E23447624FF706D00BD46E5 /* 鞠婧祎.json */,
 				A6892FF71C0BE5B400BF9708 /* Assets.xcassets */,
 				A6892FF91C0BE5B400BF9708 /* LaunchScreen.storyboard */,
 				A6892FFC1C0BE5B400BF9708 /* Info.plist */,
@@ -264,6 +281,7 @@
 			files = (
 				3E8AE0C524F7F3E7007A1796 /* 他人页作品数据.json in Resources */,
 				A6892FFB1C0BE5B400BF9708 /* LaunchScreen.storyboard in Resources */,
+				3E23447724FF706D00BD46E5 /* 鞠婧祎.json in Resources */,
 				A6892FF81C0BE5B400BF9708 /* Assets.xcassets in Resources */,
 				3EF7BA0824F8E7A40080BCC3 /* 02cities.plist in Resources */,
 			);
@@ -422,7 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "02-加载自定义控制器/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2---------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -434,7 +452,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "02-加载自定义控制器/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.itheima.-2---------";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

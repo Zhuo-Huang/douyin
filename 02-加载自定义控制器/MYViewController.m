@@ -77,7 +77,7 @@
             [strongself.collectionView reloadData];
         }];
         
-         NSString *path= [[NSBundle mainBundle]pathForResource:@"他人页作品数据" ofType:@"json"];
+         NSString *path= [[NSBundle mainBundle]pathForResource:@"鞠婧祎" ofType:@"json"];
                 NSData *data=[NSData dataWithContentsOfFile:path];
                 
         //        NSDictionary *info =[((NSDictionary*) jsonobj) objectForKey:@"user_info" ] ;
@@ -88,7 +88,8 @@
                 for(NSDictionary *dict in tempArray)
                 {
                     NSDictionary *info =[[(dict) objectForKey:@"video"]objectForKey:@"play_addr"] ;
-                    HZVideoitem *p=[HZVideoitem ameweWithDict:info];
+                    NSDictionary *info1 =[[(dict) objectForKey:@"video"]objectForKey:@"cover"] ;
+                    HZVideoitem *p=[HZVideoitem ameweWithDict:info:info1];
                     
                     [array addObject:p];
                 }
@@ -114,23 +115,23 @@
         };
         cell.backgroundColor =[UIColor redColor];
        
-    
-        
         [cell layoutTopViewWithItem:self.dataitem];
         return cell;
     }
     else
     {
         HZvideoViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
-            [cell layouyWithVideoCoverUrl:@"play" videoUrl:self.aweme[0]];
-        cell.clickEditHandler = ^()
+        NSLog(@"");
+        [cell layouyWithVideoCoverUrl:((HZVideoitem *)self.aweme[indexPath.item]).coverurl videoUrl:((HZVideoitem *)self.aweme[indexPath.item]).url];
+
+        cell.clickEditHandler =^(NSString * url)
         {
             UIViewController *view=[[UIViewController alloc] init];
             view.view.backgroundColor=[UIColor blackColor];
             
             [self.navigationController pushViewController:view animated:YES];
-            NSString *videoUrl=@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4";
-        
+//            NSString *videoUrl=@"https://stream7.iqilu.com/10339/upload_transcode/202002/18/20200218114723HDu3hhxqIT.mp4";
+            NSString *videoUrl=url;
             
             NSURL *videourl=[NSURL URLWithString:videoUrl];
               AVAsset *asset=[AVAsset assetWithURL:videourl];
@@ -182,7 +183,7 @@
     if (section==0) {
         return 1;
     }
-    return 100;
+    return 20;
 }
 //设置区头高度
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
