@@ -26,19 +26,23 @@
         [self.messageButton addGestureRecognizer:tapGesture];
         
         [self.contentView addSubview:({
-        self.liked=[[UILabel alloc]initWithFrame:CGRectMake(20, 270, 40, 20)];
-//        self.liked.backgroundColor = [UIColor grayColor];
+//        self.liked=[[UILabel alloc]initWithFrame:CGRectMake(20, 270, 40, 20)];
+        self.liked=[[UILabel alloc]init];
+        self.liked.translatesAutoresizingMaskIntoConstraints=NO;
         self.liked.textColor=[UIColor whiteColor];
         self.liked;
         })];
         [self.contentView addSubview:({
-        self.followed=[[UILabel alloc]initWithFrame:CGRectMake(100, 270, 40, 20)];
+//        self.followed=[[UILabel alloc]initWithFrame:CGRectMake(100, 270, 40, 20)];
 //        self.followed.backgroundColor = [UIColor grayColor];
+            self.followed=[[UILabel alloc]init];
+            self.followed.translatesAutoresizingMaskIntoConstraints=NO;
         self.followed.textColor=[UIColor whiteColor];
         self.followed;
         })];
         [self.contentView addSubview:({
         self.following=[[UILabel alloc]initWithFrame:CGRectMake(160, 270, 40, 20)];
+            self.following.translatesAutoresizingMaskIntoConstraints=NO;
 //        self.following.backgroundColor = [UIColor grayColor];
         self.following.textColor=[UIColor whiteColor];
         self.following;
@@ -104,15 +108,27 @@
 {
 //    self.liked.text=item.like;
     self.liked.text=[NSString stringWithFormat:@"%@获赞",item.like];
-    [self.liked sizeToFit];
+//    [self.liked sizeToFit];
+    [NSLayoutConstraint activateConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.liked attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1 constant:270],
+        [NSLayoutConstraint constraintWithItem:self.liked attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeLeft multiplier:1 constant:15]
+    ]];
     
     self.following.text=[NSString stringWithFormat:@"%@关注",item.following];
-    [self.following sizeToFit];
-    self.following.frame=CGRectMake(self.liked.frame.origin.x+self.following.frame.size.width+15, self.following.frame.origin.y, self.following.frame.size.width, self.following.frame.size.height);
+//    [self.following sizeToFit];
+    [NSLayoutConstraint activateConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.following attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1 constant:270],
+        [NSLayoutConstraint constraintWithItem:self.following attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.liked attribute:NSLayoutAttributeRight multiplier:1 constant:15]
+    ]];
+//    self.following.frame=CGRectMake(self.liked.frame.origin.x+self.following.frame.size.width+15, self.following.frame.origin.y, self.following.frame.size.width, self.following.frame.size.height);
     
     self.followed.text= [NSString stringWithFormat:@"%@粉丝",item.follower];
-    [self.followed sizeToFit];
-    self.followed.frame=CGRectMake(self.following.frame.origin.x+self.following.frame.size.width+15, self.followed.frame.origin.y, self.followed.frame.size.width, self.followed.frame.size.height);
+//    [self.followed sizeToFit];
+//    self.followed.frame=CGRectMake(self.following.frame.origin.x+self.following.frame.size.width+15, self.followed.frame.origin.y, self.followed.frame.size.width, self.followed.frame.size.height);
+    [NSLayoutConstraint activateConstraints:@[
+        [NSLayoutConstraint constraintWithItem:self.followed attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:self attribute:NSLayoutAttributeHeight multiplier:1 constant:270],
+        [NSLayoutConstraint constraintWithItem:self.followed attribute:NSLayoutAttributeLeft relatedBy:NSLayoutRelationEqual toItem:self.following attribute:NSLayoutAttributeRight multiplier:1 constant:15]
+    ]];
     
     self.u_id.text=[NSString stringWithFormat:@"抖音号%@",item.uid];
     [self.u_id sizeToFit];
